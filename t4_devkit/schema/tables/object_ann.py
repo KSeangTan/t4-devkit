@@ -76,7 +76,7 @@ class ObjectAnn(SchemaBase):
     attribute_tokens: list[str] = field(
         validator=validators.deep_iterable(validators.instance_of(str))
     )
-    bbox: RoiLike = field(converter=tuple, validator=is_roi)
+    bbox: RoiLike = field(converter=tuple, validator=None)
     mask: RLEMask | None = field(
         default=None,
         converter=lambda x: RLEMask(**x) if isinstance(x, dict) else x,
