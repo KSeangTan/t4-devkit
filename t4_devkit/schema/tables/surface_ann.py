@@ -54,8 +54,8 @@ class SurfaceAnn(SchemaBase):
             Given as [xmin, ymin, xmax, ymax].
         """
         if self.mask is None:
-            return None	
-        
+            return None
+
         mask = self.mask.decode()
         indices = np.where(mask == 1)
         xmin, ymin = np.min(indices, axis=1)

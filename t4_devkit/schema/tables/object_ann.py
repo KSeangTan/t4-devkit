@@ -6,7 +6,6 @@ from typing import TYPE_CHECKING
 from attrs import define, field, validators
 from pycocotools import mask as cocomask
 
-from t4_devkit.common.validator import is_roi
 
 from ..name import SchemaName
 from .base import SchemaBase
